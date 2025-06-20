@@ -74,7 +74,14 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: node-app
-        path: '**/*'
+        path: |
+          .next/**
+          public/**
+          app/**
+          node_modules/**
+          *.json
+          *.mjs
+          *.ts
 
   deploy:
     permissions:
