@@ -64,6 +64,7 @@ jobs:
           .eslintrc.json
           checklist.md
           next.config.mjs
+          next-env.d.ts
           postcss.config.mjs
           app
           out
