@@ -52,7 +52,21 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: node-app
-        path: .
+        path: |
+          .next
+          public
+          node_modules
+          package.json
+          package-lock.json
+          tailwind.config.ts
+          tsconfig.json
+          eslint.config.mjs
+          .eslintrc.json
+          checklist.md
+          next.config.mjs
+          postcss.config.mjs
+          app
+          out
 
   deploy:
     permissions:
