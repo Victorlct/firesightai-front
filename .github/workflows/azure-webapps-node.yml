@@ -48,12 +48,26 @@ jobs:
         npm run build
         npm run test --if-present
 
+    - name: Debug - Listar conteúdo do diretório de build
+      run: ls -la
+
+    - name: Verificar existência da pasta .next
+      run: ls -la .next
+
+    - name: Verificar conteúdo da pasta após build
+      run: |
+        echo "Raiz do projeto:"
+        ls -la
+        echo "Conteúdo de .next:"
+        ls -la .next || echo "⚠️ .next não foi gerado"
+
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v4
       with:
         name: node-app
         path: |
           .next
+          ./.next
           public
           node_modules
           package.json
