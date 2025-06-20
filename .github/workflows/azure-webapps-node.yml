@@ -85,10 +85,10 @@ jobs:
       with:
         name: node-app
         path: |
-          .next/
-          app/
-          public/
-          node_modules/
+          .next
+          app
+          public
+          node_modules
           package.json
           package-lock.json
           next.config.mjs
@@ -97,8 +97,6 @@ jobs:
           postcss.config.mjs
           tailwind.config.ts
           tsconfig.json
-          !node_modules/.cache
-          !.next/cache
 
   deploy:
     permissions:
